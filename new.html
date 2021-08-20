@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<form action="#">
+
+  <header>
+    <h2>Prioridades</h2>
+    <div>Ejemplo de pagina de prioridades.</div>
+	<h3>Ingresos</h3>
+  </header>
+ 
+  <div>
+    <label class="desc" id="title1" for="Field1">Kellogs</label>
+    <div>
+      <input id="Field1" name="Field1" type="number" min=0 max = 100 class="field text fn" value="0" size="5" tabindex="1">
+    </div>
+  </div>
+    
+  <div>
+    <label class="desc" id="title2" for="Field2">
+      Danone
+    </label>
+    <div>
+      <input id="Field2" name="Field2" type="number" min=0 max = 100 class="field text fn" value="50" size="5" tabindex="1">
+    </div>
+  </div>
+    
+  <div>
+    <label class="desc" id="title3" for="Field3">
+      Frito Lay
+    </label>
+    <div>
+      <input id="Field3" name="Field3" type="number" min=0 max = 100 class="field text fn" value="0" size="5" tabindex="1">
+    </div>
+  </div>
+  <div>
+    <label class="desc" id="title3" for="Field4">
+      Peñafiel
+    </label>
+    <div>
+      <input id="Field4" name="Field4" type="number" min=0 max = 100 class="field text fn" value="0" size="5" tabindex="1">
+    </div>
+  </div>    
+	<h3>Egresos</h3>
+	
+	<div>
+    <label class="desc" id="title1" for="Field5">Ingenio Santos</label>
+    <div>
+      <input id="Field5" name="Field5" type="number" min=0 max = 100 class="field text fn" value="0" size="5" tabindex="1">
+    </div>
+  </div>
+    
+  <div>
+    <label class="desc" id="title2" for="Field6">
+      Torus Trading
+    </label>
+    <div>
+      <input id="Field6" name="Field6" type="number" min=0 max = 100 class="field text fn" value="50" size="5" tabindex="1">
+    </div>
+  </div>
+    
+  <div>
+    <label class="desc" id="title3" for="Field7">
+      Ingenio El Molino
+    </label>
+    <div>
+      <input id="Field7" name="Field7" type="number" min=0 max = 100 class="field text fn" value="0" size="5" tabindex="1">
+    </div>
+  </div>
+  <div>
+    <label class="desc" id="title3" for="Field8">
+      Nomina
+    </label>
+    <div>
+      <input id="Field8" name="Field8" type="number" min=0 max = 100 class="field text fn" value="0" size="5" tabindex="1">
+    </div>
+	</div>  
+  
+	<div>
+    <label class="desc" id="sum" ></label>
+	</div>
+	
+	<button type = "submit" onclick="check()">Checar</button> 
+  
+<script> function check(){
+  var a = Number(document.getElementById("Field1").value);
+  var b = Number(document.getElementById("Field2").value);
+  var c = Number(document.getElementById("Field3").value);
+  var d = Number(document.getElementById("Field4").value);
+  var e = Number(document.getElementById("Field5").value);
+  var f = Number(document.getElementById("Field6").value);
+  var g = Number(document.getElementById("Field7").value);
+  var h = Number(document.getElementById("Field8").value);
+  var ingresos = a + b + c + d;
+  var egresos = e + f + g + h;
+  if (ingresos > 100 && egresos > 100){
+	alert("Ambas asignaciones exceden el 100%")
+  }else if (ingresos > 100) {
+	alert("La asignación de ingresos acutal excede el 100%")
+  } else if (egresos > 100) {
+	alert("La asignación de egresos acutal excede el 100%")
+  } else alert("Asignación guardada");
+  }
+</script>
+</form>
